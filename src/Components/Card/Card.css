@@ -1,0 +1,14 @@
+.card {
+  width: 250px;
+  height: 350px;
+  background-color: grey;
+  border-radius: 15px;
+  display: flex;
+  justify-content: center;
+}
+.cardImage {
+  width: 80%;
+  mix-blend-mode: color-burn;
+  /* filter:drop-shadow(16px 7px 8px #D21369); */
+  object-fit: contain;
+}
