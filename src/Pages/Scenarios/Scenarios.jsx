@@ -8,7 +8,7 @@ const Scenarios = () => {
     <Link to="/">Regresar</Link>
     <Link to={`/game/deportes`} >Deportes</Link>
     <Link to={`/game/comida`} >Comida</Link>
-    <Link to={`/game/ropa`} >Ropa</Link>
+    <Link to={`/game/profesiones`} >Profesiones</Link>
   </div>
 )
 };

@@ -13,7 +13,7 @@ const Card = ({ image }) => {
       >
         <img
           className="cardImage"
-          src="https://assets.adidas.com/images/w_600,f_auto,q_auto/75ca25328aed42fc8f67ae3d012a7b76_9366/Balon_de_Basquet_de_Caucho_X_3_Rayas_Naranja_HM4970_01_standard.jpg"
+          src={image}
         />
        
       </div> : <div
