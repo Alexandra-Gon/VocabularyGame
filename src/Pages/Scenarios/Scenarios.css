@@ -1,0 +1,38 @@
+
+.scenariosLinks {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.letterLink {
+  color: white;
+  font-size: 50px;
+  text-decoration: none;
+} 
+.linkStyles {
+  text-decoration: none;
+}
+.linkContainer {
+  /* background-color: blue; */
+  height: 80px;
+  border: 2px solid #cccccc;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.linkContainer:hover {
+  background-color: #00E5FF;
+}
+.colorLinkDeportes {
+  background-color: #60A123;
+}
+.colorLinkComida {
+  background-color: #E3AC36;
+}
+.colorLinkProfesiones {
+  background-color: #97008E;
+}
+.bottonBack {
+  width: 200px;
+}

@@ -1,14 +1,25 @@
 .card {
-  width: 250px;
-  height: 350px;
-  background-color: grey;
-  border-radius: 15px;
+  margin: 0 auto;
+  width: 200px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 168, 154, 0.267);
+  border-radius: 20px;
 }
-.cardImage {
-  width: 80%;
-  mix-blend-mode: color-burn;
-  /* filter:drop-shadow(16px 7px 8px #D21369); */
+
+.cardImageFront {
+  position: relative;
+  height: 200px;
+  width: 200px;
   object-fit: contain;
+}
+
+.cardImageBack {
+  position: relative;
+  height: 300px;
+  width: 200px;
+  object-fit: contain;
+  border-radius: 20px;
 }

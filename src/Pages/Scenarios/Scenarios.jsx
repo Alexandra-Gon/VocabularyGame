@@ -1,16 +1,30 @@
 import React from "react";
 import "./Scenarios.css";
 import { Link } from "react-router-dom";
+import bottonBack from "../../assets/buttons/buttonBack.png"
 
 const Scenarios = () => {
-  return ( 
-  <div>
-    <Link to="/">Regresar</Link>
-    <Link to={`/game/deportes`} >Deportes</Link>
-    <Link to={`/game/comida`} >Comida</Link>
-    <Link to={`/game/profesiones`} >Profesiones</Link>
-  </div>
-)
+  return (
+    <div className="scenariosLinks">
+      <Link to="/"><img src={bottonBack} className="bottonBack"/></Link>
+
+      <div className="linkContainer colorLinkDeportes">
+        <Link className="linkStyles" to={`/game/deportes`}>
+          <h2 className="letterLink">Deportes</h2>
+        </Link>
+      </div>
+      <div className="linkContainer colorLinkComida">
+        <Link className="linkStyles" to={`/game/comida`}>
+          <h2 className="letterLink">Comida</h2>
+        </Link>
+      </div>
+      <div className="linkContainer colorLinkProfesiones">
+        <Link className="linkStyles" to={`/game/profesiones`}>
+          <h2 className="letterLink">Profesiones</h2>
+        </Link>
+      </div>
+    </div>
+  );
 };
 
 export default Scenarios;
