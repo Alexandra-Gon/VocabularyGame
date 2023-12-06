@@ -1,12 +1,12 @@
 import React from "react";
 import "./Scenarios.css";
 import { Link } from "react-router-dom";
-import bottonBack from "../../assets/buttons/buttonBack.png"
+import buttonBack from "../../assets/buttons/buttonBack.png"
 
 const Scenarios = () => {
   return (
     <div className="scenariosLinks">
-      <Link to="/"><img src={bottonBack} className="bottonBack"/></Link>
+      <Link to="/"><img src={buttonBack} className="buttonBack"/></Link>
 
       <div className="linkContainer colorLinkDeportes">
         <Link className="linkStyles" to={`/game/deportes`}>

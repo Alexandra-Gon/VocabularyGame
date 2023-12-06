@@ -15,11 +15,15 @@
   text-decoration: none;
 }
 .linkContainer {
-  /* background-color: blue; */
   height: 80px;
-  border: 2px solid #cccccc;
+  border: 5px solid #cccccc;
   border-radius: 20px;
   padding: 20px 30px;
+  transition: 0.3s;
+}
+.linkContainer:hover {
+  transform: scale(1.3);
+  border: 15px solid #cccccc;
 }
 .linkContainer:hover {
   background-color: #00E5FF;
@@ -33,6 +37,10 @@
 .colorLinkProfesiones {
   background-color: #97008E;
 }
-.bottonBack {
+.buttonBack {
   width: 200px;
+  transition: 0.3s;
+}
+.buttonBack:hover {
+  transform: scale(1.1);
 }

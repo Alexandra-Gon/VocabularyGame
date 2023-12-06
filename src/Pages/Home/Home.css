@@ -11,4 +11,8 @@
 }
 .buttonStart {
   width: 300px;
+  transition: 0.3s;
+}
+.buttonStart:hover {
+  transform: scale(1.1);
 }

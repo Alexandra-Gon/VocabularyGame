@@ -2,11 +2,16 @@
   margin: 0 auto;
   width: 200px;
   height: 300px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 168, 154, 0.267);
   border-radius: 20px;
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.1);
 }
 
 .cardImageFront {
@@ -20,6 +25,7 @@
   position: relative;
   height: 300px;
   width: 200px;
+  padding: 10px;
   object-fit: contain;
   border-radius: 20px;
 }

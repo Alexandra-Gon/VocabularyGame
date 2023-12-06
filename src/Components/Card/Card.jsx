@@ -1,12 +1,32 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./Card.css";
 import cardBack from "../../assets/cardBack/cardBack.png";
+import { Howl } from "howler";
+import soundCard from "../../assets/sounds/soundCard.mp3";
 
 const Card = ({ image }) => {
   const [isActive, setIsActive] = useState(false);
+  const [sound, setSound] = useState(null);
+
+  useEffect(() => {
+    const sound = new Howl({ src: [soundCard] });
+    setSound(sound);
+
+    return () => {
+      sound.unload();
+    };
+  }, []);
+
+  const handleClick = () => {
+    setIsActive(!isActive);
+    if (sound) {
+      sound.play();
+      console.log(sound);
+    }
+  };
 
   return (
-    <div className="card" role="button" onClick={() => setIsActive(!isActive)}>
+    <div className="card" role="button" onClick={handleClick}>
       {isActive ? (
         <img className="cardImageFront" src={image} />
       ) : (

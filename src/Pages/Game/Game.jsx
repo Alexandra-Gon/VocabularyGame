@@ -1,8 +1,10 @@
-import React from "react";
+import React, {useEffect} from "react";
 import "./Game.css";
 import { Link, useParams } from "react-router-dom";
+import { Howl } from "howler";
 import Card from "../../Components/Card/Card";
-import bottonBack from "../../assets/buttons/buttonBack.png"
+import buttonBack from "../../assets/buttons/buttonBack.png";
+import soundGame from "../../assets/sounds/soundGame.mp3";
 // Images: Deportes
 import baloncestoImage from "../../assets/deportesImages/baloncesto.png";
 import atletismoImage from "../../assets/deportesImages/atletismo.png";
@@ -30,6 +32,11 @@ import vegetalesImage from "../../assets/comidaImages/vegetales.png";
 
 const Game = () => {
   const { parameter } = useParams();
+  useEffect (()=>{
+    const soundPlay = new Howl({ src: [soundGame] });
+    soundPlay.play()
+  }, []);
+
 
   const deportesImages = [
     baloncestoImage,
@@ -61,18 +68,31 @@ const Game = () => {
 
   return (
     <div className="game">
-      <Link to="/scenarios"><img src={bottonBack} className="bottonBack" /></Link>
-      <h1 className="title">Entrenemos tu vocabulario</h1>
+      <div className="gameBarContainer">
+        <Link to="/scenarios">
+          <img src={buttonBack} className="buttonBack" />
+        </Link>
+        <div className="gameBar">
+          <h1 className="title">Entrenemos tu vocabulario</h1>
 
-      <div className={parameter === "deportes" ? "colorLinkDeportes scenariosTitle": parameter === "profesiones" ? "colorLinkProfesiones scenariosTitle" : "colorLinkComida scenariosTitle"}>
-        <h2>{parameter}</h2>
+          <h2
+            className={
+              parameter === "deportes"
+                ? "colorLinkDeportes scenariosTitle"
+                : parameter === "profesiones"
+                ? "colorLinkProfesiones scenariosTitle"
+                : "colorLinkComida scenariosTitle"
+            }
+          >
+            {parameter}
+          </h2>
+        </div>
       </div>
-
       <div className="cardContainer">
         {parameter === `deportes`
           ? deportesImages.map((element, i) => {
               return <Card key={i} image={element} />;
-            }) 
+            })
           : parameter === `profesiones`
           ? profesionesImages.map((element, i) => {
               return <Card key={i} image={element} />;
