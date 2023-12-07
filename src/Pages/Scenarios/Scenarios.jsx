@@ -1,7 +1,7 @@
 import React from "react";
 import "./Scenarios.css";
 import { Link } from "react-router-dom";
-import buttonBack from "../../assets/buttons/buttonBack.png"
+import buttonBack from "../../assets/buttons/buttonback.webp";
 
 const Scenarios = () => {
   return (

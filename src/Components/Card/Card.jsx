@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./Card.css";
-import cardBack from "../../assets/cardBack/cardBack.png";
+import cardBack from "../../assets/cardBack/cardback.webp";
 import { Howl } from "howler";
 import soundCard from "../../assets/sounds/soundCard.mp3";
 

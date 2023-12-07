@@ -3,32 +3,32 @@ import "./Game.css";
 import { Link, useParams } from "react-router-dom";
 import { Howl } from "howler";
 import Card from "../../Components/Card/Card";
-import buttonBack from "../../assets/buttons/buttonBack.png";
+import buttonBack from "../../assets/buttons/buttonback.webp";
 import soundGame from "../../assets/sounds/soundGame.mp3";
 // Images: Deportes
-import baloncestoImage from "../../assets/deportesImages/baloncesto.png";
-import atletismoImage from "../../assets/deportesImages/atletismo.png";
-import ciclismoImage from "../../assets/deportesImages/ciclismo.png";
-import esquiarImage from "../../assets/deportesImages/esquiar.png";
-import levantarPesasImage from "../../assets/deportesImages/levantarPesas.png";
-import natacionImage from "../../assets/deportesImages/natacion.png";
-import patinarImage from "../../assets/deportesImages/patinar.png";
+import baloncestoImage from "../../assets/deportesImages/baloncesto.webp";
+import atletismoImage from "../../assets/deportesImages/atletismo.webp";
+import ciclismoImage from "../../assets/deportesImages/ciclismo.webp";
+import esquiarImage from "../../assets/deportesImages/esquiar.webp";
+import levantarPesasImage from "../../assets/deportesImages/levantarPesas.webp";
+import natacionImage from "../../assets/deportesImages/natacion.webp";
+import patinarImage from "../../assets/deportesImages/patinar.webp";
 // Images: Profesiones
-import abogadoImage from "../../assets/profesionesImages/abogado.png";
-import astronautaImage from "../../assets/profesionesImages/astronauta.png";
-import bomberoImage from "../../assets/profesionesImages/bombero.png";
-import cientificaImage from "../../assets/profesionesImages/cientifica.png";
-import cocineroImage from "../../assets/profesionesImages/cocinero.png";
-import dentistaImage from "../../assets/profesionesImages/dentista.png";
-import policiaImage from "../../assets/profesionesImages/policia.png";
+import abogadoImage from "../../assets/profesionesImages/abogado.webp";
+import astronautaImage from "../../assets/profesionesImages/astronauta.webp";
+import bomberoImage from "../../assets/profesionesImages/bombero.webp";
+import cientificaImage from "../../assets/profesionesImages/cientifica.webp";
+import cocineroImage from "../../assets/profesionesImages/cocinero.webp";
+import dentistaImage from "../../assets/profesionesImages/dentista.webp";
+import policiaImage from "../../assets/profesionesImages/policia.webp";
 // Images: Comida
-import carneImage from "../../assets/comidaImages/carne.png";
-import hamburguesaImage from "../../assets/comidaImages/hamburguesa.png";
-import panImage from "../../assets/comidaImages/pan.png";
-import pescadoImage from "../../assets/comidaImages/pescado.png";
-import polloImage from "../../assets/comidaImages/pollo.png";
-import quesoImage from "../../assets/comidaImages/queso.png";
-import vegetalesImage from "../../assets/comidaImages/vegetales.png";
+import carneImage from "../../assets/comidaImages/carne.webp";
+import hamburguesaImage from "../../assets/comidaImages/hamburguesa.webp";
+import panImage from "../../assets/comidaImages/pan.webp";
+import pescadoImage from "../../assets/comidaImages/pescado.webp";
+import polloImage from "../../assets/comidaImages/pollo.webp";
+import quesoImage from "../../assets/comidaImages/queso.webp";
+import vegetalesImage from "../../assets/comidaImages/vegetales.webp";
 
 const Game = () => {
   const { parameter } = useParams();
