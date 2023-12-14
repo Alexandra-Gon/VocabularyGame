@@ -1,0 +1,30 @@
+.gamesContainer {
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+.gameImageContainer {
+  background-color: blue;
+  border: 2px solid yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 350px;
+  height: 250px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+.gameImageContainer:hover {
+  transform: scale(1.1);
+  border: 5px solid yellowgreen;
+}
+.gameImage {
+  width: 300px;
+  border-radius: 10px;
+  position: relative;
+  object-fit: contain;
+}

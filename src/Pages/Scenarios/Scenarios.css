@@ -1,10 +1,11 @@
 
 .scenariosLinks {
-  height: 100vh;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 40px;
+ 
 }
 .letterLink {
   color: white;

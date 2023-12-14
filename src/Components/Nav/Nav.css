@@ -1,0 +1,31 @@
+.header {
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.navBar {
+  width: 100%;
+  margin-left: 50px;
+}
+
+li {
+  display: inline-block;
+}
+
+.navBarLinks {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid greenyellow;
+  padding: 0 10px;
+  margin: 0 10px;
+  background-color: green;
+}
+
+.logoWebsite {
+  width: 150px;
+  margin: 20px 0 0 50px;
+}

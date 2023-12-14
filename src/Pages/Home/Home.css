@@ -1,16 +1,19 @@
 .homeContainer {
-  height: 100vh;
+  padding: 0;
+  margin: 0;
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 .title {
   text-transform: uppercase;
   font-size: 60px;
 }
 .buttonStart {
-  width: 300px;
+  width: 200px;
   transition: 0.3s;
 }
 .buttonStart:hover {

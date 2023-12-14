@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
-import "./Game.css";
 import { Link, useParams } from "react-router-dom";
 import { Howl } from "howler";
+import "./CardsGame.css";
 import Card from "../../Components/Card/Card";
 import buttonBack from "../../assets/buttons/buttonback.webp";
 import soundGame from "../../assets/sounds/soundGame.mp3";
@@ -30,8 +30,9 @@ import polloImage from "../../assets/comidaImages/pollo.webp";
 import quesoImage from "../../assets/comidaImages/queso.webp";
 import vegetalesImage from "../../assets/comidaImages/vegetales.webp";
 
-const Game = () => {
+const CardsGame = () => {
   const { parameter } = useParams();
+  
   useEffect (()=>{
     const soundPlay = new Howl({ src: [soundGame] });
     soundPlay.play()
@@ -105,4 +106,4 @@ const Game = () => {
   );
 };
 
-export default Game;
+export default CardsGame;
