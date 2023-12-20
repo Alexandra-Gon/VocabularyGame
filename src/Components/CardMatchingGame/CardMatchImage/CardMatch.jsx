@@ -3,6 +3,7 @@ import "./CardMatch.css";
 
 
 export const CardMatch = ( {nameImage} ) => {
+  
   return (
 
     <div className='cardMatch'>
