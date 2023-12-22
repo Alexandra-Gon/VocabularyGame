@@ -3,6 +3,7 @@ import "./CardMatch.css";
 
 
 export const CardMatch = ( {nameImage} ) => {
+
   
   return (
 
@@ -14,3 +15,4 @@ export const CardMatch = ( {nameImage} ) => {
 };
 
 export default CardMatch
+ 

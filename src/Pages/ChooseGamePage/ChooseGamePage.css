@@ -1,11 +1,19 @@
 .gamesContainer {
   margin: 0;
   padding: 0;
-  height: 80vh;
-  margin-top: 30px;
+  height: 100vh;
+  /* margin-top: 30px; */
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   gap: 30px;
+}
+
+@media (min-width: 800px) {
+  .gamesContainer {
+    flex-direction: row;
+  }
 }
 .gameImageContainer {
   background-color: blue;
@@ -13,18 +21,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 350px;
-  height: 250px;
+  width: 280px;
+  height: 200px;
   border-radius: 10px;
   transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  .gameImageContainer {
+    width: 350px;
+    height: 250px;
+  }
 }
 .gameImageContainer:hover {
   transform: scale(1.1);
   border: 5px solid yellowgreen;
 }
 .gameImage {
-  width: 300px;
+  width: 240px;
   border-radius: 10px;
   position: relative;
   object-fit: contain;
+  transition: 0.3s;
+}
+
+@media (min-width: 600px) {
+  .gameImage {
+    width: 300px;
+  }
 }

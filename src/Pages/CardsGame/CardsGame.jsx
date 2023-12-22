@@ -32,6 +32,8 @@ import vegetalesImage from "../../assets/comidaImages/vegetales.webp";
 
 const CardsGame = () => {
   const { parameter } = useParams();
+
+  console.log(parameter)
   
   useEffect (()=>{
     const soundPlay = new Howl({ src: [soundGame] });

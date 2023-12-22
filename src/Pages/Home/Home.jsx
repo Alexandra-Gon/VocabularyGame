@@ -8,7 +8,7 @@ const Home = () => {
       <div className="homeContainer">
         <h1 className="title">Entrenemos tu vocabulario</h1>
         <Link to="/games" >
-          <img src={buttonStart} className="buttonstart"/>
+          <img src={buttonStart} className="buttonStart"/>
         </Link>
       </div>
   );

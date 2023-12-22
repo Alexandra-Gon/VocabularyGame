@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { React, useState, useEffect } from "react";
 import "./MatchingGame.css";
 import CardMatch from "../../Components/CardMatchingGame/CardMatchImage/CardMatch";
 import CardWord from "../../Components/CardMatchingGame/CardMatchWord/CardWord";
@@ -37,9 +37,9 @@ import viajar from "../../assets/imagesMatchGame/viajar.webp";
 import pintar from "../../assets/imagesMatchGame/pintar.webp";
 
 const MatchingGame = (name) => {
-  // const [match, setMatch] = useState();
-
-  
+  const [score, setScore] = useState(0);
+  const [selectedCards, setSelectedCards] = useState("");
+  const [selectedWords, setSelectedWords] = useState("");
 
   const palabras = [
     { name: "cantar", image: cantar },
@@ -84,67 +84,63 @@ const MatchingGame = (name) => {
     // image: escuchar},
   ];
 
+  const [randomImages, setRandomImages] = useState(palabras.slice(0, 12));
+  const [randomWords, setRandomWords] = useState(palabras);
 
-  const handleClick = (e) => {
-    let nameCard = "";
-    palabras.map((element, i) => {
-      nameCard += palabras[i].element.name;
-    });
+  useEffect(() => {
+    if (
+      selectedCards === selectedWords &&
+      selectedCards.length > 0 &&
+      selectedWords.length > 0
+    ) {
+      console.log("SON IGUALES!!!");
+      setScore(score + 1);
+      setSelectedCards("");
+      setSelectedWords("");
+    } else if (selectedCards.length > 0 && selectedWords.length > 0) {
+      console.log("SON DIFERENTES!!!");
+      setSelectedCards("");
+      setSelectedWords("");
+    }
+  }, [selectedCards, selectedWords]);
+
+  const handleReload = () => {
+    console.log("REINICIANDO");
+    setRandomImages(palabras.sort(() => Math.random() - 0.5).slice(0, 12));
+    setRandomWords(palabras.sort(() => Math.random() - 0.5));
+    setScore(0);
   };
-
-  const randomImages = palabras.sort(() => Math.random() - 0.5).slice(0, 12);
-  const randomWords = palabras.sort(() => Math.random() - 0.5).slice(0, 20);
-
-  // const lectorCambio = () => {
-  //   console.log("hola")
-  //   palabras.name === palabras.image ? setMatch + 10
-  //   : setMatch + 2;
-  // }
-
-  // let prueba = 0;
-  // const handleChangeScore = (e) => {
-  //   let comparar = 0;
-  //   palabras.map((element) => {
-  //     if (<CardMatch nameImage={element.image}/> == <CardWord name={element.name}/>) {
-  //       return ("Comparar", comparar + 1);
-  //     } else {
-  //       return "No es similar";
-  //     }
-  //   });
-
-  //   console.log("prueba", prueba + 1)
-  // };
-
-  
 
   return (
     <main>
       <div id="score">
         <img src={starScore} className="starScore" />
         <h2>SCORE:</h2>
-        <p className="counterScore">0</p>
+        <p className="counterScore">{score}</p>
       </div>
 
       <div className="containerCardsMatch">
         <div className="containerCardsImages">
-          <button 
-          onClick={handleClick}
-          >
-            {randomImages.map((element) => (
-              <CardMatch key={element.image} nameImage={element.image} />
-            ))}
-          </button>
+          {randomImages.map((element) => (
+            <button
+              key={element.image}
+              onClick={() => setSelectedCards(element.name)}
+            >
+              <CardMatch nameImage={element.image} />
+            </button>
+          ))}
         </div>
-
         <div className="containerCardsWords">
-          <button 
-          // onClick={handleClick}
-          >
-            {randomWords.map((element) => (
-              <CardWord key={element.name} name={element.name} />
-            ))}
-          </button>
+          {randomWords.map((element) => (
+            <button
+              key={element.name}
+              onClick={() => setSelectedWords(element.name)}
+            >
+              <CardWord name={element.name} />
+            </button>
+          ))}
         </div>
+        <button onClick={handleReload}>RELOAD</button>
       </div>
     </main>
   );
