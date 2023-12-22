@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { Howl } from "howler";
 import "./CardsGame.css";
@@ -33,13 +33,10 @@ import vegetalesImage from "../../assets/comidaImages/vegetales.webp";
 const CardsGame = () => {
   const { parameter } = useParams();
 
-  console.log(parameter)
-  
-  useEffect (()=>{
+  useEffect(() => {
     const soundPlay = new Howl({ src: [soundGame] });
-    soundPlay.play()
+    soundPlay.play();
   }, []);
-
 
   const deportesImages = [
     baloncestoImage,

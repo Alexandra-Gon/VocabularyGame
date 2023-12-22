@@ -3,12 +3,11 @@
 }
 
 .containerCardsMatch {
-  /* display: grid;
-  grid-template-columns: 1fr 1fr; */
   width: 90%;
   margin: 0 auto;
   display: flex;
   gap: 30px;
+  margin-bottom: 30px;
 }
 .containerCardsImages {
   width: 50%;
@@ -16,10 +15,6 @@
   flex-wrap: wrap;
   gap: 15px;
   justify-content: center;
-  /* display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(4, 120px);
-  grid-column-gap: 20px; */
 }
 .containerCardsWords {
   width: 50%;
@@ -27,11 +22,6 @@
   flex-wrap: wrap;
   gap: 10px;
   justify-content: center;
-
-  /* display: grid;
-  grid-template-columns: repeat(4, 150px);
-  grid-template-rows: repeat(5, 75px);
-  grid-column-gap: 20px; */
 }
 #score {
   display: flex;
@@ -40,6 +30,7 @@
   gap: 10px;
   width: 90%;
   font-size: 20px;
+  margin-bottom: 20px;
 }
 .counterScore {
   font-size: 30px;
@@ -48,13 +39,23 @@
   width: 50px;
   margin-bottom: 10px;
 }
-
-
+.buttonReplay {
+  background-color: transparent;
+  border: none;
+}
+.buttonReplay img {
+  width: 70px;
+  cursor: pointer;
+}
 /*  Card Match */
+
+.selectedCard {
+  background-color: yellowgreen;
+}
+
 .cardMatch {
-  /* background-color: green; */
-  width: 200px;
-  height: 100px;
+  width: 150px;
+  height: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -63,14 +64,25 @@
   border: 1px solid yellowgreen;
   transition: 0.3s;
 }
+@media (min-width: 600px) {
+  .cardMatch {
+    width: 200px;
+    height: 100px;
+  }
+}
 .cardMatch:hover {
   scale: 1.1;
   background-color: yellowgreen;
 }
 .imageCardMatch {
-  width: 180px;
+  width: 140px;
   border-radius: 10px;
   border: 1px solid yellowgreen;
+}
+@media (min-width: 600px) {
+  .imageCardMatch {
+    width: 180px;
+  }
 }
 .imageCardMatch:hover {
   border: 2px solid rgb(0, 29, 0);
@@ -80,17 +92,28 @@
 
 .cardWord {
   background-color: rgb(0, 99, 0);
-  width: 150px;
+  width: 120px;
   text-align: center;
   border-radius: 10px;
   border: 1px solid yellowgreen;
   cursor: pointer;
   transition: 0.3s;
-  height: 60px;
+  height: 40px;
   font-size: 18px;
   color: white;
+}
+
+@media (min-width: 600px) {
+  .cardWord {
+    width: 150px;
+    height: 60px;
+  }
 }
 .cardWord:hover {
   background-color: yellowgreen;
   color: black;
+}
+
+.selectedWord {
+  background-color: yellowgreen;
 }

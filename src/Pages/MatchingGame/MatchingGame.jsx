@@ -1,6 +1,7 @@
 import { React, useState, useEffect } from "react";
 import "./MatchingGame.css";
 import starScore from "../../assets/starScore.png";
+import buttonReplay from "../../assets/buttons/buttonReplay.webp";
 
 // import Images
 import acampar from "../../assets/imagesMatchGame/acampar.webp";
@@ -91,28 +92,29 @@ const MatchingGame = (name) => {
       selectedCards.length > 0 &&
       selectedWords.length > 0
     ) {
-      console.log("SON IGUALES!!!");
       setScore(score + 1);
       setSelectedCards("");
       setSelectedWords("");
     } else if (selectedCards.length > 0 && selectedWords.length > 0) {
-      console.log("SON DIFERENTES!!!");
       setSelectedCards("");
       setSelectedWords("");
     }
   }, [selectedCards, selectedWords]);
 
   const handleReload = () => {
-    console.log("REINICIANDO");
     setRandomImages(palabras.sort(() => Math.random() - 0.5).slice(0, 12));
     setRandomWords(palabras.sort(() => Math.random() - 0.5));
     setScore(0);
+    setSelectedCards("");
+    setSelectedWords("");
   };
 
   return (
     <main className="matchingGameContainer">
       <div id="score">
-        <button onClick={handleReload}>RELOAD</button>
+        <button className="buttonReplay" onClick={handleReload}>
+          <img alt="replay button" src={buttonReplay} />
+        </button>
         <img src={starScore} className="starScore" />
         <h2>SCORE:</h2>
         <p className="counterScore">{score}</p>
@@ -122,28 +124,33 @@ const MatchingGame = (name) => {
         <div className="containerCardsImages">
           {randomImages.map((element) => (
             <button
-              className="cardMatch"
+              className={
+                selectedCards === element.name
+                  ? "cardMatch selectedCard"
+                  : "cardMatch"
+              }
               key={element.image}
               onClick={() => setSelectedCards(element.name)}
             >
               <img src={element.image} className="imageCardMatch" />
-              {/* <CardMatch nameImage={element.image} /> */}
             </button>
           ))}
         </div>
         <div className="containerCardsWords">
           {randomWords.map((element) => (
             <button
-              className="cardWord"
+              className={
+                selectedWords === element.name
+                  ? "cardWord selectedWord"
+                  : "cardWord"
+              }
               key={element.name}
               onClick={() => setSelectedWords(element.name)}
             >
               {element.name}
-              {/* <CardWord name={element.name} /> */}
             </button>
           ))}
         </div>
-        
       </div>
     </main>
   );
