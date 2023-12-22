@@ -21,7 +21,6 @@ const Card = ({ image }) => {
     setIsActive(!isActive);
     if (sound) {
       sound.play();
-      console.log(sound);
     }
   };
 

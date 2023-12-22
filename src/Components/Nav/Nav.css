@@ -1,0 +1,44 @@
+.header {
+  height: 20vh;
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+}
+
+@media (min-width: 600px) {
+  .header {
+    width: 80%;
+    margin: 0 auto;
+    margin-left: 50px;
+    align-items: start;
+  }
+}
+
+@media (min-width: 600px) {
+  .navBar {
+    align-items: start;
+  }
+}
+
+li {
+  display: inline-block;
+}
+
+.navBarLinks {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  border: 1px solid greenyellow;
+  padding: 0 10px;
+  margin: 0 10px;
+  background-color: green;
+}
+
+.logoWebsite {
+  width: 150px;
+  margin: 20px 0 0 50px;
+}
