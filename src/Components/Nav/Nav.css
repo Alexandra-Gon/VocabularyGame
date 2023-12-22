@@ -1,17 +1,19 @@
 .header {
-  height: 20vh;
   display: flex;
-  position: fixed;
+  /* position: fixed; */
   flex-direction: column;
   justify-content: space-evenly;
   width: 100%;
   align-items: center;
+  margin: 1vh 0;
+  /* gap: 20px; */
+  height: 13vh;
 }
 
 @media (min-width: 600px) {
   .header {
     width: 80%;
-    margin: 0 auto;
+    margin: 1vh auto;
     margin-left: 50px;
     align-items: start;
   }
@@ -40,5 +42,4 @@ li {
 
 .logoWebsite {
   width: 150px;
-  margin: 20px 0 0 50px;
 }
