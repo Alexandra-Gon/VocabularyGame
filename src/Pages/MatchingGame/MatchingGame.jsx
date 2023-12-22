@@ -1,7 +1,5 @@
 import { React, useState, useEffect } from "react";
 import "./MatchingGame.css";
-import CardMatch from "../../Components/CardMatchingGame/CardMatchImage/CardMatch";
-import CardWord from "../../Components/CardMatchingGame/CardMatchWord/CardWord";
 import starScore from "../../assets/starScore.png";
 
 // import Images
@@ -112,8 +110,9 @@ const MatchingGame = (name) => {
   };
 
   return (
-    <main>
+    <main className="matchingGameContainer">
       <div id="score">
+        <button onClick={handleReload}>RELOAD</button>
         <img src={starScore} className="starScore" />
         <h2>SCORE:</h2>
         <p className="counterScore">{score}</p>
@@ -123,24 +122,28 @@ const MatchingGame = (name) => {
         <div className="containerCardsImages">
           {randomImages.map((element) => (
             <button
+              className="cardMatch"
               key={element.image}
               onClick={() => setSelectedCards(element.name)}
             >
-              <CardMatch nameImage={element.image} />
+              <img src={element.image} className="imageCardMatch" />
+              {/* <CardMatch nameImage={element.image} /> */}
             </button>
           ))}
         </div>
         <div className="containerCardsWords">
           {randomWords.map((element) => (
             <button
+              className="cardWord"
               key={element.name}
               onClick={() => setSelectedWords(element.name)}
             >
-              <CardWord name={element.name} />
+              {element.name}
+              {/* <CardWord name={element.name} /> */}
             </button>
           ))}
         </div>
-        <button onClick={handleReload}>RELOAD</button>
+        
       </div>
     </main>
   );

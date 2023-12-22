@@ -1,22 +1,37 @@
+.matchingGameContainer {
+  min-height: 85vh;
+}
+
 .containerCardsMatch {
-  height: 80vh;
-  margin: 60px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  /* grid-column-gap: 20px; */
-  /* justify-content: center; */
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  gap: 30px;
 }
 .containerCardsImages {
-  display: grid;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  /* display: grid;
   grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(5, 120px);
-  grid-column-gap: 20px;
+  grid-template-rows: repeat(4, 120px);
+  grid-column-gap: 20px; */
 }
 .containerCardsWords {
-  display: grid;
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+
+  /* display: grid;
   grid-template-columns: repeat(4, 150px);
   grid-template-rows: repeat(5, 75px);
-  grid-column-gap: 20px;
+  grid-column-gap: 20px; */
 }
 #score {
   display: flex;
@@ -32,4 +47,50 @@
 .starScore {
   width: 50px;
   margin-bottom: 10px;
+}
+
+
+/*  Card Match */
+.cardMatch {
+  /* background-color: green; */
+  width: 200px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  cursor: pointer;
+  border: 1px solid yellowgreen;
+  transition: 0.3s;
+}
+.cardMatch:hover {
+  scale: 1.1;
+  background-color: yellowgreen;
+}
+.imageCardMatch {
+  width: 180px;
+  border-radius: 10px;
+  border: 1px solid yellowgreen;
+}
+.imageCardMatch:hover {
+  border: 2px solid rgb(0, 29, 0);
+}
+
+/* Card Word */
+
+.cardWord {
+  background-color: rgb(0, 99, 0);
+  width: 150px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid yellowgreen;
+  cursor: pointer;
+  transition: 0.3s;
+  height: 60px;
+  font-size: 18px;
+  color: white;
+}
+.cardWord:hover {
+  background-color: yellowgreen;
+  color: black;
 }
