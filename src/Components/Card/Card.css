@@ -9,6 +9,7 @@
   background-color: rgba(0, 168, 154, 0.267);
   border-radius: 20px;
   transition: 0.3s;
+  cursor: pointer;
 }
 .card:hover {
   transform: scale(1.1);
